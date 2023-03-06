@@ -1,0 +1,33 @@
+header {
+    width: 100%;
+    background-color: #404041;
+    display: grid;
+    grid-template-rows: 6rem 28rem;
+}
+
+header .header__navbar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.header__navbar--title {
+    text-decoration: none;
+    color: var(--color-primary);
+    display: block;
+    font-size: 2.4rem;
+    margin-left: 2rem;
+    align-self: center;
+}
+
+.header__navbar .header__navbar--nav-desktop {
+    display: none;
+}
+
+.header__navbar button {
+    justify-self: end;
+    background-color: transparent;
+    border: none;
+    margin-right: 1rem;
+    cursor: pointer;
+    color: var(--color-primary);
+}

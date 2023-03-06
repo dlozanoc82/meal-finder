@@ -1,0 +1,21 @@
+/* Globals */
+:root {
+    --color-primary: #F8951D;
+    --color-scondary: #404041;
+    --just-white: #FFFFFF;
+    --just-black: #000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.inactive {
+    display: none;
+}
