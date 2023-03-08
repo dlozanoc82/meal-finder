@@ -5,44 +5,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscador Recetas Comida</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/spinner.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Buscador Recetas Comida</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success bg-gradient p-3">
-        <div class="container-fluid">
-            <a class="navbar-brand fs-5" href="index.html">Buscador de Recetas</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+    <header>
+
+        <nav class="header__navbar">
+            <a href="#" class="header__navbar--title">KASTY</a>
+            <ul class="header__navbar--nav-desktop">
+                <li>Home</li>
+                <li>Favorite</li>
+            </ul>
+            <button id="buttonMenu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor">
+                    <path d="M6 12H42V16.032H6V12ZM6 25.968V22.03H42V25.968H6ZM6 36V31.968H42V36H6Z"></path>
+                </svg>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link fs-5 active" aria-current="page" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fs-5" href="favoritos.html">Mis Favoritos</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
 
-    <main class="mt-5 container-lg">
-        <h2 class="text-center fs-1">Inicio</h2>
-
-        <div class="d-md-flex justify-content-md-center mt-5 ">
-            <form class="card col-md-8 bg-light p-5">
-                <div>
-                    <label for="categorias" class="form-label">Categoría</label>
+        <div class="header__principal">
+            <a href="#"><img class="logo" src="img/logo.png" alt="logo"></a>
+            <form>
+                <div class="content-select">
                     <select id="categorias" class="form-select">
                         <option selected>-- Seleccione --</option>
                     </select>
+                    <i></i>
                 </div>
             </form>
+        </div>
+
+    </header>
+
+    <nav class="navbar__mobile inactive">
+
+        <div class="navbar__mobile__closebotton">
+            <button id="closeMenuButton">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor">
+                    <path
+                        d="M37.968 12.844L26.812 24L37.968 35.156L35.156 37.968L24 26.812L12.844 37.968L10.032 35.156L21.188 24L10.032 12.844L12.844 10.032L24 21.188L35.156 10.032L37.968 12.844Z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <ul class="navbar__mobile__list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Favorite</a></li>
+        </ul>
+
+    </nav>
+
+    <main class="mt-5 container-lg">
+        <div class="sk-chase inactive">
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
+            <div class="sk-chase-dot"></div>
         </div>
         <div id="resultado" class="mt-5 row"></div>
     </main>
